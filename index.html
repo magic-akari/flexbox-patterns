@@ -1,0 +1,20 @@
+---
+layout: default
+title: Intro
+chapter: "0"
+---
+<article>
+<header>
+  <h1>{{ site.title }}</h1>
+  <h2>{{ site.description }}</h2>
+</header>
+<div class="homeCtaContainer" ><div class="homeCtaButton" ><a href="{{ site.github.repository_url }}" target="_blank" class="btn btn--cta btn--fullWidth" ><span class="btn__icon fa fa-github" ></span><span class="btn__label" >Source on GitHub</span></a></div><div class="homeCtaButton" ><a href="http://twitter.com/home?status=Learn%20how%20to%20build%20awesome%20UI%20components%20using%20CSS%20flexbox%20at%20{{site.github.url}}." target="_blank" class="btn btn--hollow btn--fullWidth" ><span class="btn__icon fa fa-twitter" ></span><span class="btn__label" >Tweet this</span></a></div></div>
+<p class="homeDescription">Flexbox is awesome, but it introduces many new concepts that can make it difficult to use. These interactive examples will show you practical ways to use it to build UI components. They start out simple and get more complex near the end. You can start using these patterns in your own code right away, though I recommend you apply accessibility best practices to the markup (like using semantic HTML5 elements).</p>
+</article>
+{% assign sorted = site.pages| where_exp:"item","item.thumb" | sort:"chapter" %}
+<div class="thumb-grid">
+{% for my_page in sorted %}
+<a class="thumb-card" href="{{ my_page.url | relative_url }}"><img class="thumb-img" src="{{ my_page.thumb|prepend:'/assets/thumbs/'| relative_url }}"></img><p class="thumb-title">{{ my_page.title | escape }}</p></a>
+{% endfor %}
+<div>
+{% include pagination.html %}

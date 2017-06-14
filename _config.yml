@@ -1,0 +1,18 @@
+title: Flexbox Patterns
+
+description: Build awesome user interfaces with CSS flexbox. Examples and source code included.
+baseurl: ""
+url: ""
+permalink: pretty
+
+# Build settings
+markdown: kramdown
+
+sass:
+    style: compressed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - assets/examples
+  - assets/styles
