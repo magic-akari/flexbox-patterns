@@ -1,4 +1,4 @@
 ---
 layout: default
 ---
-<article><heade><h1>{{ page.title | escape }}</h1></header>{{ content }}</article>{% include pagination.html %}
+<article><heade><h1>{{ page.title | escape }}</h1></header><script>const bindButtonToggle = (containerClassName,itemClassName,itemSelectedClassName)=>{const container=document.querySelector('.'+containerClassName);const items = Array.from(document.querySelectorAll('.'+itemClassName));container.onclick = (e)=> {if(e.target.classList.contains(itemClassName)){items.map(el=>el.classList.remove(itemSelectedClassName));e.target.classList.add(itemSelectedClassName);}}}</script>{{ content }}</article>{% include pagination.html %}
