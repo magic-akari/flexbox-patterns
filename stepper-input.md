@@ -7,13 +7,13 @@ thumb: stepperInput.jpg
 <div class="demo">
 {% include_relative assets/examples/stepper-input.html %}
 </div>
-Let’s start off with a simple Stepper Input component. When hooked up to some JavaScript, clicking the plus and minus buttons will increment and decrement the input field’s value.
+让我们从一个简单的 Stepper Input 组件开始。 当绑定了一些 JavaScript 后，点击加和减按钮，会增加或减少输入框里的值。
 
-Normally you would build something like this by inlining the button and input elements with `display: inline-block` (or maybe `float: left` if you’re old school).
+通常你会用一个 `display: inline-block` 来内联按钮和输入框。 (或者使用 `float: left` 这些老掉牙的方案)。
 
-But that will result in creating specific selectors for both of those elements. With flexbox, you won’t need those selectors: you can accomplish the same effect by adding `display: flex` to the container.
+但这将导致为这两个元素创建特定的选择器。使用 flexbox 的话, 并不需要这些选择器：只要把 `display: flex` 添加到容器，就能完成同样的效果。
 
-When you add this property to the container, you’re telling that element, “Hey buddy, you’re in charge here! Lay out your direct descendant children according to flexbox rules.” In their most basic form, these rules arrange the children along what’s called the “main axis”, by default the x–axis, from left to right.
+当你把这个属性添加到容器时，你就是在告诉这个元素，“嘿，哥们儿，这里由你负责！让你的第一代子元素遵循flexbox规则。” 在其中最基本的形式中，这些规则让孩子元素沿着被称作“主轴”的方向排列，默认是X轴(水平方向)，从左到右。
 
 ```css
 {% include_relative assets/styles/stepper-input.css %}

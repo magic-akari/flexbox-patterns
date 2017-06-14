@@ -7,7 +7,7 @@ thumb: tabs.jpg
 <div class="demo">
 {% include_relative assets/examples/tabs.html %}
 </div>
-Simply using `display: flex` is pretty versatile. These tabs are laid out the exact same way as the Stepper Input example.
+简单地使用 `display: flex` 就可以实现多种功能。 这些选项卡(tabs)的排列方式和 Stepper Input 实例中一摸一样。
 
 ```css
 {% include_relative assets/styles/tabs.css %}

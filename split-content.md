@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Splitting things apart
+title: 让他们分开
 chapter: "2"
 ---
-This section shows you how to build fluid layouts that separate and split content apart.
+这部分内容将会向你介绍如何构建一个可以分割内容的流式布局。
