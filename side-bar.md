@@ -20,10 +20,5 @@ flex-direction: column sets the main axis to be vertical instead of horizontal. 
 {% include_relative assets/examples/side-bar.html %}
 ```
 <script>
-const sideBar = document.querySelector(".sideBar");
-const sideBar__item = Array.from(document.querySelectorAll(".sideBar__item"));
-sideBar.onclick = (e)=>{
-  sideBar__item.map(el => el.classList.remove("is-side-bar-item-selected"));
-  e.target.classList.add("is-side-bar-item-selected");
-}
+bindButtonToggle('sideBar','sideBar__item','is-side-bar-item-selected');
 </script>

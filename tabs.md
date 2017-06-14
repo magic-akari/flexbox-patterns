@@ -17,10 +17,5 @@ thumb: tabs.jpg
 {% include_relative assets/styles/tabs.css %}
 ```
 <script>
-const tabs = document.querySelector(".tabs");
-const tabArray = Array.from(document.querySelectorAll(".tab"));
-tabs.onclick = (e)=>{
-  tabArray.map(el => el.classList.remove("is-tab-selected"));
-  e.target.classList.add("is-tab-selected");
-}
+bindButtonToggle('tabs','tab','is-tab-selected')
 </script>

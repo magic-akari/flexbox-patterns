@@ -27,10 +27,5 @@ Our trusty `display: flex` property is at work here, but a couple other flexbox 
 ```
 <script>
 document.querySelector(".fa").style["pointer-events"] = "none";
-const siteHeader = document.querySelector(".siteHeader");
-const siteHeader__item = Array.from(document.querySelectorAll(".siteHeader__item"));
-siteHeader.onclick = (e)=>{
-  siteHeader__item.map(el => el.classList.remove("is-site-header-item-selected"));
-  e.target.classList.add("is-site-header-item-selected");
-}
+bindButtonToggle('siteHeader','siteHeader__item','is-site-header-item-selected')
 </script>
